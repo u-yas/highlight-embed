@@ -4,16 +4,15 @@
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import hljs from 'highlight.js';
+	import type { PageData } from './$types';
 
-	let lang = $page.url.searchParams.get('lang');
-	let language = `language-${lang}`;
-	let code = $page.url.searchParams.get('code');
-	let theme = $page.url.searchParams.get('theme');
+	export let data: PageData;
+	$: language = `language-${data?.lang}`;
 
 	onMount(() => {
 		let codeTag = document.getElementById('code');
 
-		const elem = hljs.highlightAuto(code!, [lang!]);
+		const elem = hljs.highlightAuto(data?.code!, [data?.lang!]);
 		codeTag!.innerHTML = elem.value;
 	});
 </script>
@@ -21,7 +20,7 @@
 <svelte:head>
 	<link
 		rel="stylesheet"
-		href={`//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/${theme}.min.css`}
+		href={`//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/${data?.theme}.min.css`}
 	/>
 </svelte:head>
 <div class="written">
