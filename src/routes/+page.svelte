@@ -115,7 +115,9 @@ console.log(root);
 				on:click={() => {
 					const encoded = encodeURIComponent(code);
 					navigator.clipboard
-						.writeText(`/embed?code=${encoded}&lang=${language}&theme=${theme}`)
+						.writeText(
+							`https://highlight-embed.u-yas.dev/embed?code=${encoded}&lang=${language}&theme=${theme}`
+						)
 						.then(() => {
 							alert('Copied to clipboard');
 						});
