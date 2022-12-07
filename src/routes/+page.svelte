@@ -114,9 +114,13 @@ console.log(root);
 			<Button
 				on:click={() => {
 					const encoded = encodeURIComponent(code);
-					navigator.clipboard.writeText(encoded).then(() => {
-						alert('Copied to clipboard');
-					});
+					navigator.clipboard
+						.writeText(
+							`https://u-yas.github.io/${base}/embed?code=${encoded}&lang=${language}&theme=${theme}`
+						)
+						.then(() => {
+							alert('Copied to clipboard');
+						});
 				}}>Generate Link</Button
 			>
 		</Column>
