@@ -14,6 +14,7 @@
 	import { highlightThemes } from '../lib/themes';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 
 	let language = 'javascript';
 	const languages = hljs.listLanguages();
@@ -123,7 +124,7 @@ console.log(root);
 			<Button
 				on:click={() => {
 					const encoded = encodeURIComponent(code);
-					const path = `/embed?code=${encoded}&lang=${language}&theme=${theme}`;
+					const path = `${base}/embed?code=${encoded}&lang=${language}&theme=${theme}`;
 					goto(path);
 				}}>Preview</Button
 			>
