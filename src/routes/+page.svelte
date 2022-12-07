@@ -115,9 +115,7 @@ console.log(root);
 				on:click={() => {
 					const encoded = encodeURIComponent(code);
 					navigator.clipboard
-						.writeText(
-							`https://u-yas.github.io/${base}/embed?code=${encoded}&lang=${language}&theme=${theme}`
-						)
+						.writeText(`/embed?code=${encoded}&lang=${language}&theme=${theme}`)
 						.then(() => {
 							alert('Copied to clipboard');
 						});
@@ -128,7 +126,7 @@ console.log(root);
 			<Button
 				on:click={() => {
 					const encoded = encodeURIComponent(code);
-					const path = `${base}/embed?code=${encoded}&lang=${language}&theme=${theme}`;
+					const path = `/embed?code=${encoded}&lang=${language}&theme=${theme}`;
 					goto(path);
 				}}>Preview</Button
 			>
