@@ -1,7 +1,6 @@
 <script lang="ts">
 	import 'carbon-components-svelte/css/white.css';
 	import '../another.css';
-	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import hljs from 'highlight.js';
 	import type { PageData } from './$types';

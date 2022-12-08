@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "vite build && cp -rf _headers .svelte-kit/cloudflare/_headers",
 		"deploy": "touch build/.nojekyll && gh-pages -d build -t true",
 		"preview": "vite preview",
 		"test": "playwright test",

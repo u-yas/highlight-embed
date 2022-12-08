@@ -14,7 +14,6 @@
 	import { highlightThemes } from '../lib/themes';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
-	import { base } from '$app/paths';
 
 	let language = 'javascript';
 	const languages = hljs.listLanguages();
