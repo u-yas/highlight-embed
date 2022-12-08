@@ -40,6 +40,7 @@
 		bottom: 0;
 		right: 0;
 		padding: 0.5rem;
+		padding-right: 3rem;
 		font-size: 1rem;
 		color: gray;
 	}
@@ -56,6 +57,7 @@
 	}
 	pre {
 		height: 100%;
+		line-height: 1.75em;
 	}
 	code {
 		display: block;
