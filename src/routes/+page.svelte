@@ -168,6 +168,7 @@ console.log(root);
 	.code-wrapper {
 		height: 100%;
 		border: 1px solid #e0e0e0;
+		max-width: 100%;
 	}
 
 	.column-wrapper {

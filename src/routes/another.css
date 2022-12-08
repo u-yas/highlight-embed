@@ -1,3 +1,6 @@
 code span {
   display: inline;
 }
+.bx--row {
+  flex-wrap: nowrap;
+}
