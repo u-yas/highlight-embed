@@ -112,15 +112,17 @@ console.log(root);
 		<Column>
 			<Button
 				on:click={() => {
-					const encoded = encodeURIComponent(code);
+					const eC = encodeURIComponent(code);
+					const eL = encodeURIComponent(language);
+					const eT = encodeURIComponent(theme);
 					navigator.clipboard
 						.writeText(
-							`https://highlight-embed.u-yas.dev/embed?code=${encoded}&lang=${language}&theme=${theme}`
+							`<iframe title="highlight-embed-code" src="https://highlight-embed.u-yas.dev/embed/?code=${eC}&lang=${eL}&theme=${eT}" />`
 						)
 						.then(() => {
 							alert('Copied to clipboard');
 						});
-				}}>Generate Link</Button
+				}}>Generate iframe Link</Button
 			>
 		</Column>
 		<Column>
